@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>A script on this page starts this clock:</p>
+
+<p id="demo"></p>
+
+<script>
+var myVar = setInterval(myTimer, 2000);
+
+function myTimer() {
+  var d = Math.floor(Math.random() * (100-40)+1) + 40;
+  document.getElementById("demo").innerHTML = d;
+}
+</script>
+
+</body>
+</html>
