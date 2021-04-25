@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button id="ib">Make a guess</button>
+
+<p id="result"></p>
+
+
+<script>
+
+var randomNumber = Math.floor(Math.random() * 101);
+
+var count = 1;
+
+document.getElementById("ib").onclick = function(){
+	var number = window.prompt("Enter a number: ");	
+
+    if (number != randomNumber){
+    	if(number < (randomNumber-10)){
+    	document.getElementById("result").innerHTML = "Too Low!";
+    }
+    else if(number > (randomNumber + 10)){
+    document.getElementById("result").innerHTML = "Too High!";
+    }
+        count++;
+    }
+    else{
+        document.getElementById("result").innerHTML = "You got it right in "+count+" tries!";
+    }
+	    
+}
+
+</script>
+</body>
+</html>
